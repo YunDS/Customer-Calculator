@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.MlCalcController">
    <children>
-      <HBox alignment="CENTER_LEFT" layoutX="313.0" layoutY="369.0" prefHeight="35.0" prefWidth="287.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0">
+       <HBox alignment="CENTER" layoutX="313.0" layoutY="369.0" prefHeight="35.0" prefWidth="287.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="계산하기">
                <HBox.margin>
@@ -29,29 +29,50 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <TextArea layoutX="73.0" layoutY="274.0" prefHeight="150.0" prefWidth="287.0" />
+      
       <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <Label prefHeight="35.0" prefWidth="75.0" text="Name">
+            <Label prefHeight="35.0" prefWidth="93.0" text="Name">
                <HBox.margin>
-                  <Insets right="40.0" />
+                  <Insets right="20.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="75.0" text="ml">
+            <Label prefHeight="35.0" prefWidth="94.0" text="ml">
                <HBox.margin>
-                  <Insets right="40.0" />
+                  <Insets right="20.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="75.0" text="price">
+            <Label prefHeight="35.0" prefWidth="94.0" text="price">
                <HBox.margin>
-                  <Insets right="40.0" />
+                  <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="75.0" text="per 100ml">
+            <Label prefHeight="35.0" prefWidth="181.0" text="price per 100ml">
                <HBox.margin>
-                  <Insets left="150.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
+         </children>
+      </HBox>
+      
+      <HBox layoutX="36.0" layoutY="76.0" prefHeight="35.0" prefWidth="635.0">
+         <children>
+            <TextField prefHeight="54.0" prefWidth="93.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField prefHeight="54.0" prefWidth="93.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField prefHeight="54.0" prefWidth="93.0">
+               <HBox.margin>
+                  <Insets right="140.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
    </children>

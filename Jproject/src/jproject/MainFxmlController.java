@@ -30,7 +30,6 @@ public class MainFxmlController implements Initializable {
         Scene scene = new Scene(MlCalc);
         Stage primaryStage = (Stage)mlbutton.getScene().getWindow();
         primaryStage.setScene(scene);
-        primaryStage.close();
        
     }
     @FXML

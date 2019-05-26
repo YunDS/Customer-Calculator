@@ -29,6 +29,31 @@
             <Insets />
          </opaqueInsets>
       </HBox>
+      <TextArea layoutX="73.0" layoutY="274.0" prefHeight="150.0" prefWidth="287.0" />
+      <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
+         <children>
+            <Label prefHeight="35.0" prefWidth="75.0" text="Name">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="75.0" text="ml">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="75.0" text="price">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="75.0" text="per 100ml">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
    </children>
    <stylesheets>
         <URL value="@Mlcalcul.css" />

@@ -21,24 +21,40 @@ import javafx.scene.control.TextField;
  * @author yds92
  */
 public class MlCalcController implements Initializable {
-    @FXML private Label FirstOneName;
-    @FXML private TextField FirName;
-    @FXML private TextField FirMl; 
-    @FXML private TextField FirPrice; 
-    @FXML private TextField FirPerprice; 
+    @FXML private Label CompareResult;
+    @FXML private TextField FirMl, SecMl; 
+    @FXML private TextField FirPrice, SecPrice; 
+    @FXML private TextField FirPerprice, SecPerprice; 
     
+    int div, sum, sediv, sesum;
     @FXML
     public void CalculateButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
-        int  ml = Integer.parseInt(FirMl.getText());
-        int price = Integer.parseInt(FirPrice.getText());
-        int div, sum;
-        div = ml/100;
-        sum = price/div;
-        FirPerprice.setText(String.valueOf(sum));
-        FirstOneName.setText(FirName.getText());
+        int ml, seml;
+        int price, seprice;
+        
+        ml = Integer.parseInt(FirMl.getText());
+        price = Integer.parseInt(FirPrice.getText());
+        seml = Integer.parseInt(SecMl.getText());
+        seprice = Integer.parseInt(SecPrice.getText());
+        
+        div = ml/100; sum = price/div;
+        sediv = seml/100; sesum = seprice/sediv;
+        
+        FirPerprice.setText(String.valueOf(sum));    
+        SecPerprice.setText(String.valueOf(sesum));
     }
-
+    
+    @FXML private TextField FirName, SecName;
+    
+    public void CompareButtonAction(ActionEvent event) throws IOException{
+        String FirstN = FirName.getText();
+        String SecN = SecName.getText();
+        if(sum >= sesum)
+            CompareResult.setText(SecN + "이 " + FirstN + "보다 " + (sum-sesum) + "더 저렴 합니다.");
+        else
+            CompareResult.setText(FirstN + "이 " + SecN + "보다 " + (sesum-sum) + "더 저렴 합니다.");
+    }
     /**
      * Initializes the controller class.
      */

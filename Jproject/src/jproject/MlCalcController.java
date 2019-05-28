@@ -21,17 +21,21 @@ import javafx.scene.control.TextField;
  * @author yds92
  */
 public class MlCalcController implements Initializable {
-    @FXML
-    private Label FirstOneName;
-    private TextField FirName;
-    private TextField FirMl; 
-    private TextField FirPrice; 
-    private TextField FirPerprice; 
+    @FXML private Label FirstOneName;
+    @FXML private TextField FirName;
+    @FXML private TextField FirMl; 
+    @FXML private TextField FirPrice; 
+    @FXML private TextField FirPerprice; 
     
     @FXML
     public void CalculateButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
-        
+        int  ml = Integer.parseInt(FirMl.getText());
+        int price = Integer.parseInt(FirPrice.getText());
+        int div, sum;
+        div = ml/100;
+        sum = price/div;
+        FirPerprice.setText(String.valueOf(sum));
         FirstOneName.setText(FirName.getText());
     }
 
@@ -42,5 +46,4 @@ public class MlCalcController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
 }

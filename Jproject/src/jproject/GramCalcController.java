@@ -24,40 +24,40 @@ import javafx.stage.Stage;
  *
  * @author yds92
  */
-public class MlCalcController implements Initializable {
-    @FXML private Label CompareResult;
-    @FXML private TextField FirMl, SecMl; 
-    @FXML private TextField FirPrice, SecPrice; 
-    @FXML private TextField FirPerprice, SecPerprice; 
+public class GramCalcController implements Initializable {
+    @FXML private Label GramCompareResult;
+    @FXML private TextField Firgram, Secgram; 
+    @FXML private TextField FirGprice, SecGprice; 
+    @FXML private TextField FirGperprice, SecGperprice; 
     
     int div, sum, sediv, sesum;
     @FXML
-    public void CalculateButtonAction (ActionEvent event) throws IOException{
+    public void CalculateGramButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
-        int ml, seml;
+        int gram, segram;
         int price, seprice;
         
-        ml = Integer.parseInt(FirMl.getText());
-        price = Integer.parseInt(FirPrice.getText());
-        seml = Integer.parseInt(SecMl.getText());
-        seprice = Integer.parseInt(SecPrice.getText());
+        gram = Integer.parseInt(Firgram.getText());
+        price = Integer.parseInt(FirGprice.getText());
+        segram = Integer.parseInt(Secgram.getText());
+        seprice = Integer.parseInt(SecGprice.getText());
         
-        div = ml/100; sum = price/div;
-        sediv = seml/100; sesum = seprice/sediv;
+        div = gram/100; sum = price/div;
+        sediv = segram/100; sesum = seprice/sediv;
         
-        FirPerprice.setText(String.valueOf(sum));    
-        SecPerprice.setText(String.valueOf(sesum));
+        FirGperprice.setText(String.valueOf(sum));    
+        SecGperprice.setText(String.valueOf(sesum));
     }
     
-    @FXML private TextField FirName, SecName;
+    @FXML private TextField GFirName, GSecName;
     
-    public void CompareButtonAction(ActionEvent event) throws IOException{
-        String FirstN = FirName.getText();
-        String SecN = SecName.getText();
+    public void GramCompareButtonAction(ActionEvent event) throws IOException{
+        String FirstN = GFirName.getText();
+        String SecN = GSecName.getText();
         if(sum >= sesum)
-            CompareResult.setText(SecN + "이(가) " + FirstN + "보다 " + (sum-sesum) + "원 더 저렴 합니다.");
+            GramCompareResult.setText(SecN + "이(가) " + FirstN + "보다 " + (sum-sesum) + "원 더 저렴 합니다.");
         else
-            CompareResult.setText(FirstN + "이(가) " + SecN + "보다 " + (sesum-sum) + "원 더 저렴 합니다.");
+            GramCompareResult.setText(FirstN + "이(가) " + SecN + "보다 " + (sesum-sum) + "원 더 저렴 합니다.");
     }
     
     @FXML private Button BacktoMain;
@@ -67,6 +67,7 @@ public class MlCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
+
     /**
      * Initializes the controller class.
      */
@@ -74,4 +75,5 @@ public class MlCalcController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
 }

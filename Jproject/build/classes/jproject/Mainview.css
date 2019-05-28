@@ -20,7 +20,7 @@
     -fx-font-size: 65px;
     -fx-font-family: "Arial Black";
     -fx-fill:#b2b2b2;
-    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 6, 0.0, 4, 3);
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 4, 0.0, 3, 2);
 }
 
 /*

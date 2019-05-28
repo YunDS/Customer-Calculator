@@ -12,19 +12,19 @@
    <children>
       <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <Label prefHeight="35.0" prefWidth="89.0" text="Name">
+            <Label prefHeight="35.0" prefWidth="68.0" text="Name">
                <HBox.margin>
-                  <Insets right="25.0" />
+                  <Insets left="20.0" right="25.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="94.0" text="Volume(ml)">
+            <Label prefHeight="35.0" prefWidth="98.0" text="Volume">
                <HBox.margin>
                   <Insets left="10.0" right="20.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="94.0" text="Price">
+            <Label prefHeight="35.0" prefWidth="68.0" text="Price">
                <HBox.margin>
-                  <Insets right="120.0" />
+                  <Insets left="10.0" right="134.0" />
                </HBox.margin>
             </Label>
             <Label prefHeight="35.0" prefWidth="181.0" text="Price per 100ml">
@@ -36,17 +36,17 @@
       </HBox>
       <HBox layoutX="36.0" layoutY="76.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <TextField fx:id="FirName" prefHeight="35.0" prefWidth="105.0" promptText="종류(커피, 탄산)">
+            <TextField fx:id="FirName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0" promptText="종류(커피, 탄산)">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="FirMl" prefHeight="54.0" prefWidth="93.0" promptText="용량">
+            <TextField fx:id="FirMl" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="용량(ml)">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="FirPrice" prefHeight="54.0" prefWidth="93.0" promptText="가격">
+            <TextField fx:id="FirPrice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="가격">
                <HBox.margin>
                   <Insets right="140.0" />
                </HBox.margin>
@@ -56,17 +56,17 @@
       </HBox>
       <HBox layoutX="36.0" layoutY="125.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <TextField fx:id="SecName" prefHeight="35.0" prefWidth="105.0">
+            <TextField fx:id="SecName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="SecMl" prefHeight="54.0" prefWidth="93.0">
+            <TextField fx:id="SecMl" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="SecPrice" prefHeight="54.0" prefWidth="93.0">
+            <TextField fx:id="SecPrice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
                <HBox.margin>
                   <Insets right="140.0" />
                </HBox.margin>
@@ -84,7 +84,7 @@
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="홈으로">
+            <Button fx:id = "BacktoMain" mnemonicParsing="false" onAction="#BacktoMainButtonAction" prefHeight="35.0" prefWidth="75.0" text="홈으로">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></Button>
@@ -93,7 +93,7 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <Label fx:id="CompareResult" layoutX="36.0" layoutY="240.0" prefHeight="146.0" prefWidth="635.0" />
+      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="240.0" prefHeight="146.0" prefWidth="635.0" />
      
    </children>
    <stylesheets>

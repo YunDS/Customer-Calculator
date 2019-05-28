@@ -35,7 +35,10 @@ public class MainFxmlController implements Initializable {
     @FXML
     private Button grambutton;
     public void GramButtonAction(ActionEvent event) throws IOException{
-        
+        Parent GramCalc = FXMLLoader.load(getClass().getResource("GramCalc.fxml"));
+        Scene scene = new Scene(GramCalc);
+        Stage primaryStage = (Stage)grambutton.getScene().getWindow();
+        primaryStage.setScene(scene);
     }
     
     @Override

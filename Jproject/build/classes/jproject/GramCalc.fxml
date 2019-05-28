@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import java.net.*?>
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.MlCalcController">
-   <children>
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.GramCalcController">
+    <children>
       <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
          <children>
             <Label prefHeight="35.0" prefWidth="68.0" text="Name">
@@ -27,7 +27,7 @@
                   <Insets left="10.0" right="134.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="181.0" text="Price per 100ml">
+            <Label prefHeight="35.0" prefWidth="181.0" text="Price per 100g">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -36,51 +36,51 @@
       </HBox>
       <HBox layoutX="36.0" layoutY="76.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <TextField fx:id="FirName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0" promptText="종류(커피, 탄산)">
+            <TextField fx:id="GFirName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0" promptText="종류(과자, 고기)">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="FirMl" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="용량(ml)">
+            <TextField fx:id="Firgram" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="용량(g)">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="FirPrice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="가격">
+            <TextField fx:id="FirGprice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0" promptText="가격">
                <HBox.margin>
                   <Insets right="140.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="FirPerprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
+            <TextField fx:id="FirGperprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
       <HBox layoutX="36.0" layoutY="125.0" prefHeight="35.0" prefWidth="635.0">
          <children>
-            <TextField fx:id="SecName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0">
+            <TextField fx:id="GSecName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="SecMl" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
+            <TextField fx:id="Secgram" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="SecPrice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
+            <TextField fx:id="SecGprice" alignment="CENTER" prefHeight="54.0" prefWidth="93.0">
                <HBox.margin>
                   <Insets right="140.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="SecPerprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
+            <TextField fx:id="SecGperprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="313.0" layoutY="369.0" prefHeight="35.0" prefWidth="287.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button fx:id="CalculateButton" onAction="#CalculateButtonAction" prefHeight="35.0" prefWidth="75.0" text="계산하기">
+            <Button fx:id="CalculateButton" onAction="#CalculateGramButtonAction" prefHeight="35.0" prefWidth="75.0" text="계산하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#CompareButtonAction" prefHeight="35.0" prefWidth="75.0" text="비교하기">
+            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#GramCompareButtonAction" prefHeight="35.0" prefWidth="75.0" text="비교하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
@@ -93,10 +93,10 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="240.0" prefHeight="146.0" prefWidth="635.0" />
+      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="240.0" prefHeight="146.0" prefWidth="635.0" />
      
    </children>
-   <stylesheets>
-        <URL value="@Mlcalcul.css" />
+    <stylesheets>
+        <URL value="@Gramcalc.css"/>
     </stylesheets>
 </AnchorPane>

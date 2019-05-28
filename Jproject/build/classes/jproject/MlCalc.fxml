@@ -17,17 +17,17 @@
                   <Insets right="25.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="94.0" text="ml">
+            <Label prefHeight="35.0" prefWidth="94.0" text="Volume(ml)">
                <HBox.margin>
                   <Insets left="10.0" right="20.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="94.0" text="price">
+            <Label prefHeight="35.0" prefWidth="94.0" text="Price">
                <HBox.margin>
                   <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <Label prefHeight="35.0" prefWidth="181.0" text="price per 100ml">
+            <Label prefHeight="35.0" prefWidth="181.0" text="Price per 100ml">
                <HBox.margin>
                   <Insets />
                </HBox.margin>

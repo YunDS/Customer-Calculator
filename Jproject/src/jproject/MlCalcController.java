@@ -51,9 +51,9 @@ public class MlCalcController implements Initializable {
         String FirstN = FirName.getText();
         String SecN = SecName.getText();
         if(sum >= sesum)
-            CompareResult.setText(SecN + "이 " + FirstN + "보다 " + (sum-sesum) + "더 저렴 합니다.");
+            CompareResult.setText(SecN + "이(가) " + FirstN + "보다 " + (sum-sesum) + "원 더 저렴 합니다.");
         else
-            CompareResult.setText(FirstN + "이 " + SecN + "보다 " + (sesum-sum) + "더 저렴 합니다.");
+            CompareResult.setText(FirstN + "이(가) " + SecN + "보다 " + (sesum-sum) + "원 더 저렴 합니다.");
     }
     /**
      * Initializes the controller class.

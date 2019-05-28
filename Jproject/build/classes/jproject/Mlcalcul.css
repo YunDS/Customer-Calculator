@@ -4,6 +4,14 @@
 
 Label{
     -fx-font-size: 20px;
+    -fx-font: "Cooper Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(178,178,178,0.5), 0,0,0,3);
+    -fx-alignment: CENTER;
+}
+#CompareResult{
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
     -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.5), 0,0,0,1);

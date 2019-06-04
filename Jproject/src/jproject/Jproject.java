@@ -21,6 +21,7 @@ public class Jproject extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainFxml.fxml"));
         Scene scene = new Scene(root);
+        primaryStage.setTitle("소비자 계산기 프로그램");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

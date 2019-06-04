@@ -1,6 +1,10 @@
 .root{
     -fx-background-image: url("square.png");
 }
+.button{
+    -fx-font-size : 16px;
+    -fx-font-weight: bold;
+}
 
 Label{
     -fx-font-size: 21px;

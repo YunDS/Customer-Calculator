@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import java.net.*?>
 <?import java.lang.*?>
@@ -33,6 +35,9 @@
                </HBox.margin>
             </Label>
          </children>
+         <effect>
+            <DropShadow color="#fffffff9" height="6.0" radius="2.5" width="6.0" />
+         </effect>
       </HBox>
       <HBox layoutX="36.0" layoutY="76.0" prefHeight="35.0" prefWidth="635.0">
          <children>
@@ -74,17 +79,17 @@
             <TextField fx:id="SecPerprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="313.0" layoutY="369.0" prefHeight="35.0" prefWidth="287.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0">
+      <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="329.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
          <children>
-            <Button fx:id="CalculateButton" onAction="#CalculateButtonAction" prefHeight="35.0" prefWidth="75.0" text="계산하기">
+            <Button fx:id="CalculateButton" onAction="#CalculateButtonAction" prefHeight="70.0" prefWidth="95.0" text="계산하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#CompareButtonAction" prefHeight="35.0" prefWidth="75.0" text="비교하기">
+            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#CompareButtonAction" prefHeight="70.0" prefWidth="95.0" text="비교하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button fx:id = "BacktoMain" mnemonicParsing="false" onAction="#BacktoMainButtonAction" prefHeight="35.0" prefWidth="75.0" text="홈으로">
+            <Button fx:id="BacktoMain" mnemonicParsing="false" onAction="#BacktoMainButtonAction" prefHeight="70.0" prefWidth="95.0" text="홈으로">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></Button>
@@ -92,8 +97,11 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <effect>
+            <DropShadow color="#00000075"/>
+         </effect>
       </HBox>
-      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="240.0" prefHeight="146.0" prefWidth="635.0" />
+      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
      
    </children>
    <stylesheets>

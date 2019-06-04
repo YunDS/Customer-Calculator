@@ -97,7 +97,7 @@
             <DropShadow color="#00000075" />
          </effect>
       </HBox>
-      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
+      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
      
    </children>
     <stylesheets>

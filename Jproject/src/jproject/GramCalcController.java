@@ -30,20 +30,20 @@ public class GramCalcController implements Initializable {
     @FXML private TextField FirGprice, SecGprice; 
     @FXML private TextField FirGperprice, SecGperprice; 
     
-    int div, sum, sediv, sesum;
+    int sum, sesum;
     @FXML
     public void CalculateGramButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
-        int gram, segram;
-        int price, seprice;
+        int gram = 0, segram = 0;
+        int price = 0, seprice = 0;
         
         gram = Integer.parseInt(Firgram.getText());
         price = Integer.parseInt(FirGprice.getText());
         segram = Integer.parseInt(Secgram.getText());
         seprice = Integer.parseInt(SecGprice.getText());
         
-        div = gram/100; sum = price/div;
-        sediv = segram/100; sesum = seprice/sediv;
+        sum = price*100/gram;
+        sesum = seprice*100/segram;
         
         FirGperprice.setText(String.valueOf(sum));    
         SecGperprice.setText(String.valueOf(sesum));

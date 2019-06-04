@@ -30,7 +30,7 @@ public class MlCalcController implements Initializable {
     @FXML private TextField FirPrice, SecPrice; 
     @FXML private TextField FirPerprice, SecPerprice; 
     
-    int div, sum, sediv, sesum;
+    int sum, sesum;
     @FXML
     public void CalculateButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
@@ -42,8 +42,8 @@ public class MlCalcController implements Initializable {
         seml = Integer.parseInt(SecMl.getText());
         seprice = Integer.parseInt(SecPrice.getText());
         
-        div = ml/100; sum = price/div;
-        sediv = seml/100; sesum = seprice/sediv;
+        sum = price*100/ml;
+        sesum = seprice*100/seml;
         
         FirPerprice.setText(String.valueOf(sum));    
         SecPerprice.setText(String.valueOf(sesum));

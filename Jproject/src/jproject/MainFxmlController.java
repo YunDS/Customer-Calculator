@@ -25,15 +25,14 @@ public class MainFxmlController implements Initializable {
     @FXML private Button mlbutton;
     
     public void MLButtonAction(ActionEvent event) throws IOException{
-        
         Parent MlCalc = FXMLLoader.load(getClass().getResource("MlCalc.fxml"));
         Scene scene = new Scene(MlCalc);
         Stage primaryStage = (Stage)mlbutton.getScene().getWindow();
         primaryStage.setScene(scene);
        
     }
-    @FXML
-    private Button grambutton;
+    
+    @FXML private Button grambutton;
     public void GramButtonAction(ActionEvent event) throws IOException{
         Parent GramCalc = FXMLLoader.load(getClass().getResource("GramCalc.fxml"));
         Scene scene = new Scene(GramCalc);

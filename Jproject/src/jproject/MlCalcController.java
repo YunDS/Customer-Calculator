@@ -5,6 +5,7 @@
  */
 package jproject;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +17,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 /**
@@ -30,7 +34,7 @@ public class MlCalcController implements Initializable {
     @FXML private TextField FirPrice, SecPrice; 
     @FXML private TextField FirPerprice, SecPerprice; 
     
-    int sum, sesum;
+    double sum, sesum;
     @FXML
     public void CalculateButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
@@ -59,6 +63,10 @@ public class MlCalcController implements Initializable {
         else
             CompareResult.setText(FirstN + "이(가) " + SecN + "보다 " + (sesum-sum) + "원 더 저렴 합니다.");
     }
+    private Stage primaryStage;
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
     
     @FXML private Button BacktoMain;
     public void BacktoMainButtonAction(ActionEvent event) throws IOException{
@@ -67,6 +75,22 @@ public class MlCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
+    
+    @FXML private Button SaveButton;
+    @FXML private Label FirperPrice;
+    @FXML private TextArea LoadDatashow;
+    
+    public void SaveButtonAction(ActionEvent event) throws IOException{
+        FileChooser choose = new FileChooser();
+        choose.getExtensionFilters().add(new ExtensionFilter("All files", "*.*"));
+        File selectedFile = choose.showSaveDialog(primaryStage);
+        if(selectedFile != null){
+            LoadDatashow.setText(selectedFile.getPath());
+        }
+    }
+      
+    
+    
     /**
      * Initializes the controller class.
      */

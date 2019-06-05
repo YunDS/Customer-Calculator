@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="jproject.GramCalcController">
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.GramCalcController">
     <children>
       <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
          <children>
@@ -75,17 +75,27 @@
             <TextField fx:id="SecGperprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="329.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
+      <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="532.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
          <children>
-            <Button fx:id="CalculateButton" onAction="#CalculateGramButtonAction" prefHeight="70.0" prefWidth="95.0" text="계산하기">
+             <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="불러오기">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="SaveButton" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="70.0" prefWidth="90.0" text="저장하기">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="CalculateButton" onAction="#CalculateGramButtonAction" prefHeight="70.0" prefWidth="90.0" text="계산하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#GramCompareButtonAction" prefHeight="70.0" prefWidth="95.0" text="비교하기">
+            <Button fx:id="CompareButton" mnemonicParsing="false" onAction="#GramCompareButtonAction" prefHeight="70.0" prefWidth="90.0" text="비교하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin></Button>
-            <Button fx:id="BacktoMain" mnemonicParsing="false" onAction="#BacktoMainButtonAction" prefHeight="70.0" prefWidth="95.0" text="홈으로">
+            <Button fx:id="BacktoMain" mnemonicParsing="false" onAction="#BacktoMainButtonAction" prefHeight="70.0" prefWidth="90.0" text="홈으로">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></Button>
@@ -98,6 +108,7 @@
          </effect>
       </HBox>
       <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
+      <TextArea layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
      
    </children>
     <stylesheets>

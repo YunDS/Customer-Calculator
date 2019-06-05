@@ -30,7 +30,7 @@ public class GramCalcController implements Initializable {
     @FXML private TextField FirGprice, SecGprice; 
     @FXML private TextField FirGperprice, SecGperprice; 
     
-    int sum, sesum;
+    double sum, sesum;
     @FXML
     public void CalculateGramButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
@@ -66,6 +66,10 @@ public class GramCalcController implements Initializable {
         Scene scene = new Scene(MainFxml);
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
+    }
+    @FXML private Button SaveButton;
+    public void SaveButtonAction(ActionEvent event) throws IOException{
+        
     }
 
     /**

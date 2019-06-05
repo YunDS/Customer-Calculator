@@ -8,19 +8,20 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
     
-    -fx-background-color: linear-gradient(#61a2b1, #2429A2);
+    -fx-background-color: linear-gradient(#557ec1, #0c39a0);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }
 .button:hover {
-    -fx-background-color: linear-gradient(#2429A2, #61a2b1);
-    -fx-text-fill: red;
+    -fx-background-color: linear-gradient(#0c39a0, #557ec1);
+    -fx-text-fill: #6493e0;
 }
 
 #title{
-    -fx-font-size: 65px;
-    -fx-font-family: "Arial Black";
-    -fx-fill:#b2b2b2;
-    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 4, 0.0, 3, 2);
+    -fx-font-size: 75px;
+    -fx-font-family: "Cooper Black";
+    -fx-text-fill:#5e76e0;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 2,2,1,2);
 }
 
 /*

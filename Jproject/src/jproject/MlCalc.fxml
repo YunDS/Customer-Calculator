@@ -81,7 +81,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="532.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="불러오기">
+            <Button fx:id="LoadButton" mnemonicParsing="false" onAction="#LoadButtonAction" prefHeight="70.0" prefWidth="90.0" text="불러오기">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>

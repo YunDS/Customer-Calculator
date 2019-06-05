@@ -5,8 +5,12 @@
  */
 package jproject;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -85,10 +89,36 @@ public class MlCalcController implements Initializable {
         choose.getExtensionFilters().add(new ExtensionFilter("All files", "*.*"));
         File selectedFile = choose.showSaveDialog(primaryStage);
         if(selectedFile != null){
-            LoadDatashow.setText(selectedFile.getPath());
+
         }
     }
-      
+    
+    public void LoadButtonAction(ActionEvent event, String txtFile) throws IOException{
+        FileChooser loadchoose = new FileChooser();
+        loadchoose.getExtensionFilters().addAll(
+                new ExtensionFilter("Text File", "*.txt"),
+                new ExtensionFilter("Image Files", "*.jpg", "*.png", "*.gif"),
+                new ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"),
+                new ExtensionFilter("All Files", "*.*")
+        );
+        File selectedFile = loadchoose.showOpenDialog(primaryStage);
+        if(selectedFile != null){
+            String text = null;
+            
+            BufferedReader br = null;
+            try{
+                br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFile)));
+                String line;
+                while((line = br.readLine()) != null){
+                    text.toString(line + "\n");
+                }
+            }
+            catch (FileNotFoundException e){
+                e.printStackTrace();
+            }
+        }
+    }
+    
     
     
     /**

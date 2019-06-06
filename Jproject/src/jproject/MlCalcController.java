@@ -110,7 +110,6 @@ public class MlCalcController implements Initializable {
                 br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFile)));
                 String line;
                 while((line = br.readLine()) != null){
-                    text.toString(line + "\n");
                 }
             }
             catch (FileNotFoundException e){

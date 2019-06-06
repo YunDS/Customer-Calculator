@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -29,6 +30,7 @@ public class GramCalcController implements Initializable {
     @FXML private TextField Firgram, Secgram; 
     @FXML private TextField FirGprice, SecGprice; 
     @FXML private TextField FirGperprice, SecGperprice; 
+    @FXML private RadioButton Hundred, Ten;
     
     double sum, sesum;
     @FXML
@@ -36,14 +38,21 @@ public class GramCalcController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
         int gram = 0, segram = 0;
         int price = 0, seprice = 0;
+        boolean CheckHundred = Hundred.isSelected();
+        boolean CheckTen = Ten.isSelected();
         
         gram = Integer.parseInt(Firgram.getText());
         price = Integer.parseInt(FirGprice.getText());
         segram = Integer.parseInt(Secgram.getText());
         seprice = Integer.parseInt(SecGprice.getText());
-        
-        sum = price*100/gram;
-        sesum = seprice*100/segram;
+        if((CheckHundred == true) && (CheckTen == false)){
+            sum = price*100/gram;
+            sesum = seprice*100/segram;
+        }
+        else {
+            sum = price*10/gram;
+            sesum = seprice*10/segram;
+        }
         
         FirGperprice.setText(String.valueOf(sum));    
         SecGperprice.setText(String.valueOf(sesum));

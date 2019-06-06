@@ -109,7 +109,23 @@
       </HBox>
       <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
       <TextArea layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
-     
+      <VBox layoutX="36.0" layoutY="395.0" prefHeight="72.0" prefWidth="105.0">
+         <children>
+             <fx:define>
+                 <ToggleGroup fx:id = "tenorhund"/>
+             </fx:define>
+            <RadioButton fx:id = "Hundred" toggleGroup = "$tenorhund" selected = "true" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" text="100g 기준으로">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id = "Ten" toggleGroup = "$tenorhund" mnemonicParsing="false" prefWidth="105.0" text="10g 기준으로">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+      </VBox>
    </children>
     <stylesheets>
         <URL value="@Gramcalc.css" />

@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.GramCalcController">
+    
     <children>
       <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
          <children>
@@ -82,7 +83,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="SaveButton" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="70.0" prefWidth="90.0" text="저장하기">
+            <Button fx:id="SaveButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="저장하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
@@ -107,27 +108,23 @@
             <DropShadow color="#00000075" />
          </effect>
       </HBox>
-      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="182.0" prefHeight="214.0" prefWidth="329.0" wrapText="true" />
+      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="384.0" layoutY="176.0" prefHeight="207.0" prefWidth="310.0" textAlignment="CENTER" wrapText="true" />
       <TextArea layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
       <VBox layoutX="36.0" layoutY="395.0" prefHeight="72.0" prefWidth="105.0">
          <children>
-             <fx:define>
-                 <ToggleGroup fx:id = "tenorhund"/>
-             </fx:define>
-            <RadioButton fx:id = "Hundred" toggleGroup = "$tenorhund" selected = "true" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" text="100g 기준으로">
-               <VBox.margin>
-                  <Insets bottom="5.0" top="10.0" />
-               </VBox.margin>
-            </RadioButton>
-            <RadioButton fx:id = "Ten" toggleGroup = "$tenorhund" mnemonicParsing="false" prefWidth="105.0" text="10g 기준으로">
-               <VBox.margin>
-                  <Insets bottom="10.0" top="5.0" />
-               </VBox.margin>
-            </RadioButton>
+             <RadioButton fx:id="Hundred" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" selected="true" text="100g 기준으로">
+                 <VBox.margin>
+                     <Insets bottom="5.0" top="10.0" />
+                 </VBox.margin>
+             </RadioButton>
+             <RadioButton fx:id="Ten" mnemonicParsing="false" prefWidth="105.0" text="10g 기준으로">
+                 <VBox.margin>
+                     <Insets bottom="10.0" top="5.0" />
+                 </VBox.margin>
+             </RadioButton>
          </children>
       </VBox>
-     
-   </children>
+    </children>
     <stylesheets>
         <URL value="@Gramcalc.css" />
     </stylesheets>

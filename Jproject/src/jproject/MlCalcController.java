@@ -33,15 +33,17 @@ import javafx.stage.Stage;
  * @author yds92
  */
 public class MlCalcController implements Initializable {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
+    
     @FXML private Label CompareResult;
     @FXML private TextField FirMl, SecMl; 
     @FXML private TextField FirPrice, SecPrice; 
-    @FXML private TextField FirPerprice, SecPerprice; 
+    @FXML private TextField FirPerprice, SecPerprice;
     
     double sum, sesum;
     @FXML
     public void CalculateButtonAction (ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
+
         int ml, seml;
         int price, seprice;
         
@@ -79,47 +81,6 @@ public class MlCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
-    
-    @FXML private Button SaveButton;
-    @FXML private Label FirperPrice;
-    @FXML private TextArea LoadDatashow;
-    
-    public void SaveButtonAction(ActionEvent event) throws IOException{
-        FileChooser choose = new FileChooser();
-        choose.getExtensionFilters().add(new ExtensionFilter("All files", "*.*"));
-        File selectedFile = choose.showSaveDialog(primaryStage);
-        if(selectedFile != null){
-
-        }
-    }
-    
-    public void LoadButtonAction(ActionEvent event, String txtFile) throws IOException{
-        FileChooser loadchoose = new FileChooser();
-        loadchoose.getExtensionFilters().addAll(
-                new ExtensionFilter("Text File", "*.txt"),
-                new ExtensionFilter("Image Files", "*.jpg", "*.png", "*.gif"),
-                new ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"),
-                new ExtensionFilter("All Files", "*.*")
-        );
-        File selectedFile = loadchoose.showOpenDialog(primaryStage);
-        if(selectedFile != null){
-            String text = null;
-            
-            BufferedReader br = null;
-            try{
-                br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFile)));
-                String line;
-                while((line = br.readLine()) != null){
-                }
-            }
-            catch (FileNotFoundException e){
-                e.printStackTrace();
-            }
-        }
-    }
-    
-    
-    
     /**
      * Initializes the controller class.
      */

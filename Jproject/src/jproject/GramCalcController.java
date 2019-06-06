@@ -45,6 +45,7 @@ public class GramCalcController implements Initializable {
         price = Integer.parseInt(FirGprice.getText());
         segram = Integer.parseInt(Secgram.getText());
         seprice = Integer.parseInt(SecGprice.getText());
+        
         if((CheckHundred == true) && (CheckTen == false)){
             sum = price*100/gram;
             sesum = seprice*100/segram;
@@ -76,10 +77,7 @@ public class GramCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
-    @FXML private Button SaveButton;
-    public void SaveButtonAction(ActionEvent event) throws IOException{
-        
-    }
+    
 
     /**
      * Initializes the controller class.

@@ -81,12 +81,12 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="532.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
          <children>
-            <Button fx:id="LoadButton" mnemonicParsing="false" onAction="#LoadButtonAction" prefHeight="70.0" prefWidth="90.0" text="불러오기">
+            <Button fx:id="LoadButton" prefHeight="70.0" prefWidth="90.0" text="불러오기">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="SaveButton" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="70.0" prefWidth="90.0" text="저장하기">
+            <Button fx:id="SaveButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="저장하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
@@ -111,7 +111,7 @@
             <DropShadow color="#00000075" />
          </effect>
       </HBox>
-      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="383.0" layoutY="167.0" prefHeight="214.0" prefWidth="311.0" wrapText="true" />
+      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="176.0" prefHeight="201.0" prefWidth="309.0" textAlignment="CENTER" wrapText="true" />
       <TextArea fx:id="LoadDatashow" layoutX="36.0" layoutY="176.0" prefHeight="201.0" prefWidth="329.0" />
      
    </children>

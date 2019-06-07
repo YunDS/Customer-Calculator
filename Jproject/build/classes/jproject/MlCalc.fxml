@@ -111,7 +111,7 @@
             <DropShadow color="#00000075" />
          </effect>
       </HBox>
-      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="176.0" prefHeight="201.0" prefWidth="309.0" wrapText="true" />
+      <Label fx:id="CompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="176.0" prefHeight="201.0" prefWidth="309.0" textAlignment="CENTER" wrapText="true" />
       <TextArea fx:id="LoadDatashow" layoutX="36.0" layoutY="176.0" prefHeight="201.0" prefWidth="329.0" />
      
    </children>

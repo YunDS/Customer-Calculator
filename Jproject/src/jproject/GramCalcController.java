@@ -14,6 +14,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -40,6 +42,7 @@ public class GramCalcController implements Initializable {
         int price = 0, seprice = 0;
         boolean CheckHundred = Hundred.isSelected();
         boolean CheckTen = Ten.isSelected();
+        Alert alert = new Alert(AlertType.INFORMATION);
         
         gram = Integer.parseInt(Firgram.getText());
         price = Integer.parseInt(FirGprice.getText());
@@ -50,9 +53,22 @@ public class GramCalcController implements Initializable {
             sum = price*100/gram;
             sesum = seprice*100/segram;
         }
-        else {
+        else if((CheckHundred == false) && (CheckTen == true)){
             sum = price*10/gram;
             sesum = seprice*10/segram;
+        }
+        else if((CheckHundred == true) && (CheckTen == true)){
+
+            alert.setTitle("오류");
+            alert.setHeaderText("계산의 기준이 두개다 선택되어있습니다.");
+            alert.setContentText("100g 과 10g중 하나만 선택해 주세요.");
+            alert.showAndWait();
+        }
+        else{
+            alert.setTitle("오류");
+            alert.setHeaderText("계산의 기준을 정해주세요");
+            alert.setContentText("100g 과 10g중에 하나만 선택해주세요.");
+            alert.showAndWait();
         }
         
         FirGperprice.setText(String.valueOf(sum));    

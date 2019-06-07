@@ -5,7 +5,12 @@
  */
 package jproject;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -19,7 +24,9 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -38,8 +45,8 @@ public class GramCalcController implements Initializable {
     @FXML
     public void CalculateGramButtonAction (ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("MlCalc.fxml"));
-        int gram = 0, segram = 0;
-        int price = 0, seprice = 0;
+        int gram, segram;
+        int price, seprice;
         boolean CheckHundred = Hundred.isSelected();
         boolean CheckTen = Ten.isSelected();
         Alert alert = new Alert(AlertType.INFORMATION);
@@ -76,7 +83,6 @@ public class GramCalcController implements Initializable {
     }
     
     @FXML private TextField GFirName, GSecName;
-    
     public void GramCompareButtonAction(ActionEvent event) throws IOException{
         String FirstN = GFirName.getText();
         String SecN = GSecName.getText();
@@ -93,6 +99,13 @@ public class GramCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
+    
+    @FXML private Button LoadButton;
+    @FXML private TextArea LoadFile;
+    public void LoadtextButtonAction(ActionEvent event) throws IOException{
+        LoadFile.setText("불러오기 버튼 눌림.");
+}
+
     
 
     /**

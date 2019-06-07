@@ -78,7 +78,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="532.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
          <children>
-             <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="불러오기">
+             <Button fx:id="LoadButton" onAction="#LoadtextButtonAction" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="불러오기">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -109,7 +109,7 @@
          </effect>
       </HBox>
       <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="384.0" layoutY="176.0" prefHeight="207.0" prefWidth="310.0" textAlignment="CENTER" wrapText="true" />
-      <TextArea layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
+      <TextArea fx:id="ShowFile" layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
       <VBox layoutX="36.0" layoutY="395.0" prefHeight="72.0" prefWidth="105.0">
          <children>
              <RadioButton fx:id="Hundred" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" selected="true" text="100g 기준으로">

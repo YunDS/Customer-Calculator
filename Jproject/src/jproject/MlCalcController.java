@@ -5,12 +5,8 @@
  */
 package jproject;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -81,6 +77,7 @@ public class MlCalcController implements Initializable {
         Stage primaryStage = (Stage)BacktoMain.getScene().getWindow();
         primaryStage.setScene(scene);
     }
+    
     /**
      * Initializes the controller class.
      */

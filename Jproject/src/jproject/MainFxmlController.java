@@ -27,7 +27,6 @@ public class MainFxmlController implements Initializable {
         Scene scene = new Scene(MlCalc);
         Stage primaryStage = (Stage)mlbutton.getScene().getWindow();
         primaryStage.setScene(scene);
-       
     }
     
     @FXML private Button grambutton;

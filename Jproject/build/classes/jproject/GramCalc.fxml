@@ -12,7 +12,7 @@
 <AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jproject.GramCalcController">
     
     <children>
-      <HBox layoutX="36.0" layoutY="32.0" prefHeight="35.0" prefWidth="635.0">
+      <HBox layoutX="43.0" layoutY="34.0" prefHeight="35.0" prefWidth="635.0">
          <children>
             <Label prefHeight="35.0" prefWidth="68.0" text="Name">
                <HBox.margin>
@@ -36,7 +36,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox layoutX="36.0" layoutY="76.0" prefHeight="35.0" prefWidth="635.0">
+      <HBox layoutX="43.0" layoutY="78.0" prefHeight="35.0" prefWidth="635.0">
          <children>
             <TextField fx:id="GFirName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0" promptText="종류(과자, 고기)">
                <HBox.margin>
@@ -56,7 +56,7 @@
             <TextField fx:id="FirGperprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
-      <HBox layoutX="36.0" layoutY="125.0" prefHeight="35.0" prefWidth="635.0">
+      <HBox layoutX="43.0" layoutY="127.0" prefHeight="35.0" prefWidth="635.0">
          <children>
             <TextField fx:id="GSecName" alignment="CENTER" prefHeight="35.0" prefWidth="105.0">
                <HBox.margin>
@@ -76,18 +76,8 @@
             <TextField fx:id="SecGperprice" disable="true" prefHeight="35.0" prefWidth="143.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="365.0" layoutY="396.0" prefHeight="70.0" prefWidth="532.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0">
+      <HBox alignment="CENTER" layoutX="375.0" layoutY="396.0" prefHeight="70.0" prefWidth="329.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="16.0">
          <children>
-             <Button fx:id="LoadButton" onAction="#LoadtextButtonAction" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="불러오기">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="SaveButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="저장하기">
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin>
-            </Button>
             <Button fx:id="CalculateButton" onAction="#CalculateGramButtonAction" prefHeight="70.0" prefWidth="90.0" text="계산하기">
                <HBox.margin>
                   <Insets left="10.0" right="10.0" />
@@ -108,8 +98,7 @@
             <DropShadow color="#00000075" />
          </effect>
       </HBox>
-      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="384.0" layoutY="176.0" prefHeight="207.0" prefWidth="310.0" textAlignment="CENTER" wrapText="true" />
-      <TextArea fx:id="ShowFile" layoutX="36.0" layoutY="176.0" prefHeight="207.0" prefWidth="329.0" />
+      <Label fx:id="GramCompareResult" alignment="CENTER" contentDisplay="CENTER" layoutX="43.0" layoutY="172.0" prefHeight="207.0" prefWidth="635.0" textAlignment="CENTER" wrapText="true" />
       <VBox layoutX="36.0" layoutY="395.0" prefHeight="72.0" prefWidth="105.0">
          <children>
              <RadioButton fx:id="Hundred" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" selected="true" text="100g 기준으로">

@@ -5,12 +5,7 @@
  */
 package jproject;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,9 +19,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -100,14 +93,6 @@ public class GramCalcController implements Initializable {
         primaryStage.setScene(scene);
     }
     
-    @FXML private Button LoadButton;
-    @FXML private TextArea LoadFile;
-    public void LoadtextButtonAction(ActionEvent event) throws IOException{
-        LoadFile.setText("불러오기 버튼 눌림.");
-}
-
-    
-
     /**
      * Initializes the controller class.
      */
